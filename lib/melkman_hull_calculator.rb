@@ -1,7 +1,7 @@
 require 'fileutils'
-require './animator'
-require './graph'
-require './simple_chain_generator'
+require_relative 'animator'
+require_relative 'graph'
+require_relative 'simple_chain_generator'
 
 class MelkmanHullCalculator
   def initialize(snapshooter = nil)
