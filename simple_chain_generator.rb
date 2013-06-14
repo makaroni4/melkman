@@ -1,32 +1,27 @@
-# TODO
-# sometimes it generates chain with intersection
 class SimpleChainGenerator
   def initialize(params = {})
     @image_size = params[:image_size] || 1000
     @center_point = Point.new(@image_size / 2, @image_size / 2)
-    @scatter = params[:scatter] || 20
-    @radius = (@image_size - 2 * @scatter) / 2
+    @radius = (@image_size - 50) / 2
   end
 
   def draw_simple_polygonal_chain(number_of_points, arc_angle)
-    angle_step = arc_angle.to_f / number_of_points.to_f
+    angle_step = arc_angle.to_f / number_of_points
 
     (1..number_of_points).map do |i|
-      angle = i * angle_step
+      angle = rand_angle(angle_step, i)
       place_point(angle)
     end
   end
 
   private
-  def scatter_point(point)
-    point.x = point.x + rand(@scatter)
-    point.y = point.y + [1, -1].sample * rand(@scatter)
-    point
+  def rand_angle(angle_step, step)
+    (step - 1) * angle_step + rand(angle_step)
   end
 
   def place_point(angle)
-    x = @center_point.x - @radius * Math.sin(angle)
-    y = @center_point.y - @radius * Math.cos(angle)
-    scatter_point(Point.new(x,y))
+    x = @center_point.x + rand(@radius) * Math.cos(angle * 3.14 / 180)
+    y = @center_point.y + rand(@radius) * Math.sin(angle * 3.14 / 180)
+    Point.new(x,y)
   end
 end
