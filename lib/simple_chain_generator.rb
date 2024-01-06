@@ -15,6 +15,7 @@ class SimpleChainGenerator
   end
 
   private
+
   def rand_angle(angle_step, step)
     (step - 1) * angle_step + rand(angle_step)
   end
@@ -22,6 +23,7 @@ class SimpleChainGenerator
   def place_point(angle)
     x = @center_point.x + rand(@radius) * Math.cos(angle * 3.14 / 180)
     y = @center_point.y + rand(@radius) * Math.sin(angle * 3.14 / 180)
+
     Point.new(x,y)
   end
 end

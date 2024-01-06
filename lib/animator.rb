@@ -2,7 +2,7 @@ class Animator
   def animate(images, delay = 30)
     animation = ImageList.new(*sort_images(images))
     animation.delay = delay
-    animation.write("animated.gif")
+    animation.write(".README/animated.gif")
   end
 
   private

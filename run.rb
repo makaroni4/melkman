@@ -1,5 +1,5 @@
-require_relative 'melkman_hull_calculator'
-require_relative 'snapshooter'
+require_relative './lib/melkman_hull_calculator'
+require_relative './lib/snapshooter'
 
 chain_drawer = SimpleChainGenerator.new(scatter: 200)
 points = chain_drawer.draw_simple_polygonal_chain(15, 270)
