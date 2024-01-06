@@ -3,7 +3,7 @@ melkman
 
 Ruby implementation of Melkman's algorithm with GIF animation
 
-![melkman anomation](http://cl.ly/image/1K0238453J3F/output_hrMwTw.gif)
+![](https://github.com/makaroni4/melkman/blob/main/.README/animated.gif?raw=true)
 
 ## Literature
 
