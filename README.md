@@ -5,6 +5,14 @@ Ruby implementation of Melkman's algorithm with GIF animation
 
 ![](https://github.com/makaroni4/melkman/blob/main/.README/animated.gif?raw=true)
 
+## Development
+
+```sh
+bundle install
+
+bundle exec ruby run.rb
+```
+
 ## Literature
 
 * [
